@@ -59,6 +59,21 @@ Each ID is a **64-bit integer**, structured as follows:
 | 10   | Machine ID | Supports 1024 unique nodes               |
 | 12   | Sequence   | Allows 4096 IDs per millisecond per node |
 
+## ⚠️ Important Note
+
+- To ensure ID uniqueness and efficient performance, always create only one instance of UniqueIdGenerator per process.
+- Creating multiple instances can lead to duplicated sequence numbers, especially within the same millisecond, and may result in non-unique IDs.
+
+## ✅ Recommended:
+
+```bash
+// Instantiate once at app startup
+const generator = new UniqueIdGenerator();
+
+// Use the same instance throughout your app
+const id = generator.generateUniqueId();
+```
+
 ## ✅ Pros
 
 - 📏 Compact: Fits in a 64-bit integer (unlike UUIDs)
