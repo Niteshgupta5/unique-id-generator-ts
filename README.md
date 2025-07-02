@@ -28,7 +28,7 @@ NPM package: [unique-id-generator-ts](https://www.npmjs.com/package/unique-id-ge
 ```bash
 import { UniqueIdGenerator } from 'unique-id-generator-ts';
 
-const generator = new UniqueIdGenerator({ machineId: 1 });
+const generator = new UniqueIdGenerator();
 
 const id = generator.generateUniqueId();
 console.log(id); // e.g., 1308924728312342528
@@ -38,6 +38,19 @@ const decoded = generator.decodeId(id);
 console.log("Decoded Info:", decoded);
 
 ```
+
+## 🛠️ Constructor with Custom Epoch
+
+You can optionally pass a custom epoch (in milliseconds) to control the base timestamp used in ID generation.
+
+```bash
+import { UniqueIdGenerator } from '@niteshgupta5/unique-id-generator';
+
+// Default epoch (if not passed): 1700000000000
+const generator = new UniqueIdGenerator(1700000000000);
+```
+
+### 📝 Note: The epoch affects the timestamp part of your ID. Use a consistent epoch across services to maintain global uniqueness and sortability.
 
 ## 📤 Output of decodeId(id)
 

@@ -1,6 +1,6 @@
 {
   "name": "unique-id-generator-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A high-performance unique ID generator based on Snowflake architecture. Supports up to 4096 unique IDs per millisecond per machine.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
