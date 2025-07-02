@@ -44,7 +44,7 @@ console.log("Decoded Info:", decoded);
 You can optionally pass a custom epoch (in milliseconds) to control the base timestamp used in ID generation.
 
 ```bash
-import { UniqueIdGenerator } from '@niteshgupta5/unique-id-generator';
+import { UniqueIdGenerator } from 'unique-id-generator-ts';
 
 // Default epoch (if not passed): 1700000000000
 const generator = new UniqueIdGenerator(1700000000000);
